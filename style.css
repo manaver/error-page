@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  background: #171717;
+  color: whitesmoke;
+  font-family: 'Baloo 2', cursive;
+  padding: 10px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: rgba(69, 69, 69, 0.2);
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(53, 73, 125, 0.5);
+  border-radius: 5px;
+}
+
+/* Customize the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(53, 73, 125, 0.7);
+}
+
+/* Customize the scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+.container {
+  background-color: rgba(53, 73, 125, 0.3);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-path {
+  background-color: rgba(255, 20, 20, 0.2);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(192, 185, 185);
+  text-align: start;
+  font-style: italic;
+}
+
+.section-heading {
+  background-color: rgba(69, 69, 69, 0.2);
+  width: 100%;
+  padding: 0;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.section {
+  background-color: rgba(69, 69, 69, 0.2);
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.section pre {
+  display: flex;
+  justify-content: flex-start;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.section pre code {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  white-space: pre-line;
+
+}
+
+.section-width {
+  width: 80vw;
+  margin: 10px auto;
+}
