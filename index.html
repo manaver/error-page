@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="section-path section-width">
-            Path to some location
+            \Dune\Database\PDOException:
         </div>
         <div class="section-heading section-width">
             <h2>
@@ -26,46 +26,78 @@
         <div class="section section-width" style="padding-right: 0px;">
             <pre>
                 <code>
-                &lt;php
+&lt;?php
 
-                    namespace App\Http\Controllers;
 
-                    use App\Models\Article;
-                    use Str;
 
-                    class ArticleController extends Controller
-                    {
-                        /* getting all post from database
-                        and sending to view*/
-                        public function index()
-                        {
-                            $articles = Article::paginate(5);
-                            return view('article', ['articles' => $articles]);
-                        }
+namespace App\Http\Controllers;
 
-                        /* selecting single post from slug and sending to view */
-                        public function getArticle($slug)
-                        {
-                            $post = Article::where('slug', $slug)->first();
-                            /* changing markdown to html */
-                            $content = $post->content;
-                            return view('post', ['post' => $post, 'content' => $content]);
-                        }
 
-                        /* posts selecting by slug */
-                        public function tagSearch($tag)
-                        {
-                            // i want to print this
-                            echo $tag;
-                        }
-                    }
-                    &gt;
+
+use App\Models\Article;
+
+use Str;
+
+
+
+class ArticleController extends Controller
+
+{
+
+    /* getting all post from database
+
+    and sending to view*/
+
+    public function index()
+
+    {
+
+        $articles = Article::paginate(5);
+
+
+
+        return view('article', ['articles' =&gt; $articles]);
+
+    }
+
+
+
+    /*selecting single post from slug and sending to view*/
+
+    public function getArticle($slug)
+
+    {
+
+        $post = Article::where('slug', $slug)-&gt;first();
+
+        /*changing markdown to html*/
+
+        $content = $post-&gt;content;
+
+
+
+        return view('post', ['post' =&gt; $post, 'content' =&gt; $content]);
+
+    }
+
+
+
+    /* posts selecting by slug */
+
+    public function tagSearch($tag)
                 </code>
             </pre>
         </div>
         <div class="section section-width" style="padding: 10px;">
             Here is a beautiful description
         </div>
+        <div class="section section-width" style="padding: 10px;">
+            Here is a beautiful description
+        </div>
+        <div class="section section-width" style="padding: 10px;">
+            Here is a beautiful description
+        </div>
+
     </div>
 </body>
 

@@ -4,10 +4,10 @@
 
 body {
   padding: 0;
-  background: #171717;
+  background: #000;
   color: whitesmoke;
   font-family: 'Baloo 2', cursive;
-  padding: 10px;
+  padding: 4px;
 }
 
 /* Customize the scrollbar track */
@@ -33,7 +33,7 @@ body {
 
 
 .container {
-  background-color: rgba(53, 73, 125, 0.3);
+  background-color: #171717;
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -45,7 +45,7 @@ body {
 }
 
 .section-path {
-  background-color: rgba(255, 20, 20, 0.2);
+  background-color: rgba(255, 20, 20, 0.3);
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -55,7 +55,7 @@ body {
 }
 
 .section-heading {
-  background-color: rgba(69, 69, 69, 0.2);
+  background-color: rgba(69, 69, 69, 0.35);
   width: 100%;
   padding: 0;
   border-radius: 10px;
@@ -64,7 +64,7 @@ body {
 }
 
 .section {
-  background-color: rgba(69, 69, 69, 0.2);
+  background-color: rgba(69, 69, 69, 0.35);
   padding: 10px 30px;
   border-radius: 10px;
 }
