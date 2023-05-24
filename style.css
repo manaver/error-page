@@ -29,8 +29,12 @@ body {
 /* Customize the scrollbar width */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
-
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-thumb:horizontal:vertical {
+  background-color: transparent; /* Set the background color to transparent */
+}
 
 .container {
   background-color: #171717;
@@ -117,6 +121,8 @@ body {
   padding: 10px 0px 10px 40px;
   color: rgb(247, 140, 140);
 }
+
+
 
 @media screen and (max-width: 810px) {
   .section .pair .value{

@@ -45,6 +45,7 @@ class migrate_users extends Migration
      *
      * @return void
      */
+
     public function up(): void
     {
         Migrater::schema()-&gt;create(&quot;users&quot;, function (Blueprint $table) {
@@ -76,6 +77,14 @@ class migrate_users extends Migration
             <h5 class="heading">This is a Key value heading</h5>
 
             <!-- Iterate this section to show key value -->
+            <div class="pair">
+                <div class="key">This is a key</div>
+                <div class="value">This is a value</div>
+            </div>
+            <div class="pair">
+                <div class="key">This is a key</div>
+                <div class="value">This is a value</div>
+            </div>
             <div class="pair">
                 <div class="key">This is a key</div>
                 <div class="value">This is a value</div>
