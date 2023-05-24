@@ -98,7 +98,7 @@ pre[class*="language-"] {
 }
 pre[class*="language-"].line-numbers {
   position: relative;
-  padding-left: 2.5em;
+  padding-left: 3em;
   counter-reset: linenumber;
 }
 pre[class*="language-"].line-numbers > code {
