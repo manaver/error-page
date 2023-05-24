@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERROR</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./prism.css">
     <!-- Text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,69 +25,46 @@
             </h2>
         </div>
         <div class="section section-width" style="padding-right: 0px;">
-            <pre>
-                <code>
+           <pre class="line-numbers">
+                <code class="language-php">
 &lt;?php
 
+namespace AppDatabaseMigration;
 
+use IlluminateDatabaseMigrationsMigration;
+use IlluminateDatabaseSchemaBlueprint;
+use IlluminateDatabaseCapsuleManager as Migrater;
 
-namespace App\Http\Controllers;
-
-
-
-use App\Models\Article;
-
-use Str;
-
-
-
-class ArticleController extends Controller
-
+class migrate_users extends Migration
 {
-
-    /* getting all post from database
-
-    and sending to view*/
-
-    public function index()
-
+    /**
+     * migration table
+     *
+     * @return void
+     */
+    public function up(): void
     {
-
-        $articles = Article::paginate(5);
-
-
-
-        return view('article', ['articles' =&gt; $articles]);
-
+        Migrater::schema()-&gt;create(&quot;users&quot;, function (Blueprint $table) {
+            $table-&gt;id();
+            $table-&gt;string(&quot;name&quot;);
+            $table-&gt;string(&quot;email&quot;)-&gt;unique();
+            $table-&gt;string(&quot;password&quot;);
+            $table-&gt;timestamps();
+        });
     }
-
-
-
-    /*selecting single post from slug and sending to view*/
-
-    public function getArticle($slug)
-
+    /**
+     * drop the table if exists
+     *
+     * @return void
+     */
+    public function down(): void
     {
-
-        $post = Article::where('slug', $slug)-&gt;first();
-
-        /*changing markdown to html*/
-
-        $content = $post-&gt;content;
-
-
-
-        return view('post', ['post' =&gt; $post, 'content' =&gt; $content]);
-
+        Migrater::schema()-&gt;dropIfExists(&quot;users&quot;);
     }
+}
 
-
-
-    /* posts selecting by slug */
-
-    public function tagSearch($tag)
                 </code>
-            </pre>
+             </pre>
         </div>
         <div class="section section-width" style="padding: 10px;">
             Here is a beautiful description
@@ -97,8 +75,8 @@ class ArticleController extends Controller
         <div class="section section-width" style="padding: 10px;">
             Here is a beautiful description
         </div>
-
     </div>
+    <script src="prism.js"> </script>
 </body>
 
 </html>
