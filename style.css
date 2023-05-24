@@ -89,3 +89,49 @@ body {
   width: 80vw;
   margin: 10px auto;
 }
+
+.section .pair{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  min-width: 70vw;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+.section .pair .key{
+    margin-right: 10px;
+    padding: 10px;
+
+}
+.section .pair .value{
+    background-color: rgba(69, 69, 69, 0.35);
+    margin-left: 10px;
+    min-width: 500px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.section .heading{
+  font-size: x-large;
+  padding: 10px 0px 10px 40px;
+  color: rgb(247, 140, 140);
+}
+
+@media screen and (max-width: 810px) {
+  .section .pair .value{
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section .pair .value{
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .section .pair .value{
+    min-width: fit-content;
+  }
+}
