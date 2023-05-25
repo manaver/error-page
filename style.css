@@ -129,7 +129,6 @@ body {
 }
 
 
-
 @media screen and (max-width: 810px) {
   .section .pair .value{
     min-width: 300px;
@@ -139,6 +138,11 @@ body {
 @media screen and (max-width: 560px) {
   .section .pair .value{
     min-width: 200px;
+    font-size: 12px;
   }
 }
-
+@media screen and (max-width: 560px) {
+  .section .pair .key{
+    font-size: 12px;
+  }
+}
