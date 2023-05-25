@@ -99,16 +99,17 @@ body {
   flex-direction: row;
   justify-content: center;
   width: fit-content;
-  min-width: 70vw;
   justify-content: space-between;
   margin: 10px auto;
+  position: relative;
+  width: 100%;
 }
 .section .pair .key{
     margin-right: 10px;
     padding: 10px;
     overflow: auto;
     max-width: 30vw;
-
+    white-space: nowrap;
 }
 .section .pair .value{
     background-color: rgba(69, 69, 69, 0.35);
@@ -119,12 +120,11 @@ body {
     max-height: 50px;
     overflow: auto;
     max-width: 30vw;
-
+    white-space: nowrap;
 }
 
 .section .heading{
   font-size: x-large;
-  padding: 10px 0px 10px 40px;
   color: rgb(247, 140, 140);
 }
 
